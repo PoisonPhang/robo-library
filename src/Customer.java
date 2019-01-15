@@ -1,4 +1,5 @@
 import java.util.List;
+
 /**
  * This will hold the names of the books in a list
  */
@@ -10,7 +11,8 @@ public class Customer {
         this.name = name;
         this.books = books;
     }
-    public Customer(){
+
+    public Customer() {
         this.name = "";
     }
 
