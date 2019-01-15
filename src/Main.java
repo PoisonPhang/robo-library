@@ -22,6 +22,17 @@ public class Main {
         library.add(temp);
     }
 
+    public void removeBook() {
+        System.out.println("What's the title of the book?");
+        String title = input.nextLine();
+        System.out.println("What's the author's name?");
+        String author = input.nextLine();
+        System.out.println("How many pages are there?");
+        String pageCount = input.nextLine();
+        Book temp = new Book(title, author, pageCount, false);
+        library.remove(temp);
+    }
+
 
 
 }
