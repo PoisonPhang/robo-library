@@ -8,7 +8,7 @@ public class Book {
 
     private String pageCount;
 
-    boolean checkedOut;
+    private boolean checkedOut;
 
     public Book(String title, String author, String pageCount, boolean checkedOut) {
         this.title = title;
@@ -56,4 +56,9 @@ public class Book {
         this.checkedOut = checkedOut;
     }
 
+    @Override
+    public String toString() {
+        return
+                title + ", by: " + author + ", " + pageCount + " pages, " + "checked out? " + checkedOut;
+    }
 }

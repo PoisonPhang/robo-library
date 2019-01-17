@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -5,11 +6,15 @@ import java.util.List;
  */
 public class Customer {
     private String name;
-    private List books;
+    private List<Book> books;
 
-    public Customer(String name, List<Book> books) {
+    public Customer(String name) {
         this.name = name;
-        this.books = books;
+        this.books = new ArrayList();
+    }
+
+    public void checkBook(Book book) {
+        books.add(book);
     }
 
     public Customer() {
@@ -30,6 +35,11 @@ public class Customer {
 
     public void setBooks(List books) {
         this.books = books;
+    }
+
+    @Override
+    public String toString() {
+        return  name + " Books:"+ books;
     }
 }
 
